@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: relatorio-alarmes
+    env: python
+    runtime: python-3.10
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app_dash_ral_analysis_animated:server
+    plan: free
